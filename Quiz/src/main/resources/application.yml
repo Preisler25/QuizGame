@@ -1,0 +1,9 @@
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+  datasource:
+    url: jdbc:mysql://localhost:5432/quiz
+    username: postgres
+    password: admin
