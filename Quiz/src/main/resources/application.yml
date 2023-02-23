@@ -1,4 +1,7 @@
 spring:
+  thymeleaf:
+    mode: HTML5
+    enabled: false
   mvc:
     view:
       prefix: /WEB-INF/jsp/
