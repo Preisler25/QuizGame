@@ -10,3 +10,6 @@ spring:
     url: jdbc:mysql://localhost:5432/quiz
     username: postgres
     password: admin
+  rsa:
+    private-key: classpath:certs/private.pem
+    public-key: classpath:certs/public.pem
