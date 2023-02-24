@@ -25,12 +25,12 @@ import org.springframework.security.web.SecurityFilterChain;
 @EnableWebSecurity
 public class SecurityConfig {
 
+
     private final RsaKeyProperties rsaKeys;
 
     public SecurityConfig(RsaKeyProperties rsaKeys) {
         this.rsaKeys = rsaKeys;
     }
-
     @Bean
     public InMemoryUserDetailsManager users() {
         return new InMemoryUserDetailsManager(
@@ -45,7 +45,7 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         return http
                 .csrf(csrf -> csrf.disable()) // (1)
-                .authorizeHttpRequests (auth -> auth
+                .authorizeRequests (auth -> auth
                         .anyRequest().authenticated())// (2)
                 .oauth2ResourceServer(OAuth2ResourceServerConfigurer::jwt)
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS)) // (3)

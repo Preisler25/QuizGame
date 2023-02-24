@@ -7,8 +7,9 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
-@EnableConfigurationProperties(RsaKeyProperties.class)
+
 @SpringBootApplication(scanBasePackages = {"PetrikDevOps.Quiz"})
+@EnableConfigurationProperties(RsaKeyProperties.class)
 public class QuizApplication extends SpringBootServletInitializer {
 
 	@Override
